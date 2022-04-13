@@ -1,0 +1,108 @@
+body {
+  justify-content: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: rgb(62, 56, 56);
+}
+
+.container {
+  display: flex;
+}
+.border {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  margin: 50px;
+}
+
+.border span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid white;
+  border-radius: 40% 55% 35% 80% / 55% 42% 65% 55%;
+}
+
+.border:hover span {
+  /* background-color: red; */
+  transition: 0.5s;
+  border: none;
+}
+
+.border span:nth-child(1) {
+  animation: circle 6s linear infinite;
+}
+.border span:nth-child(2) {
+  animation: circle 7s linear infinite;
+  animation-direction: reverse;
+}
+.border span:nth-child(3) {
+  animation: circle 4s linear infinite;
+}
+
+/* 첫번째 */
+.container .border:nth-child(1):hover span:nth-child(1) {
+  background-color: red;
+  opacity: 0.5;
+}
+.container .border:nth-child(1):hover span:nth-child(2) {
+  background-color: yellow;
+  opacity: 0.8;
+}
+.container .border:nth-child(1):hover span:nth-child(3) {
+  background-color: pink;
+  opacity: 0.3;
+}
+/* 두번째 */
+.container .border:nth-child(2):hover span:nth-child(1) {
+  background-color: dodgerblue;
+  opacity: 0.5;
+}
+.container .border:nth-child(2):hover span:nth-child(2) {
+  background-color: skyblue;
+  opacity: 0.8;
+}
+.container .border:nth-child(2):hover span:nth-child(3) {
+  background-color: blueviolet;
+  opacity: 0.3;
+}
+/* 세번째 */
+.container .border:nth-child(3):hover span:nth-child(1) {
+  background-color: red;
+  opacity: 0.5;
+}
+.container .border:nth-child(3):hover span:nth-child(2) {
+  background-color: rgba(255, 0, 0, 0.563);
+  opacity: 0.8;
+}
+.container .border:nth-child(3):hover span:nth-child(3) {
+  background-color: rgb(213, 92, 92);
+  opacity: 0.3;
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.content {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  color: #fff;
+}
+
+.content a {
+  color: yellow;
+  text-decoration: none;
+  border: 1px solid yellow;
+  padding: 8px;
+  border-radius: 30% 50% 44% 55% / 45% 40% 55% 45%;
+}
